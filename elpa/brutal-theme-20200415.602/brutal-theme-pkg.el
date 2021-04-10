@@ -1,0 +1,2 @@
+;;; Generated package description from /root/.emacs.d/elpa/brutal-theme-20200415.602/brutal-theme.el  -*- no-byte-compile: t -*-
+(define-package "brutal-theme" "20200415.602" "Brutalist theme" '((emacs "24.1")) :commit "ee63563b7cb07aeec342722ae684426cb0465a98" :authors '(("Topi Kettunen" . "topi@kettunen.io")) :maintainer '("Topi Kettunen" . "topi@kettunen.io") :url "https://github.com/topikettunen/brutal")

@@ -1,0 +1,10 @@
+/etc/nginx/nginx.conf
+/etc/nginx/#nginx.conf#
+/data/www/index.html
+/data/www/#index.html#
+/root/.emacs.d/init.el
+/root/.emacs.d/#init.el#
+/root/.emacs.d/macros.el
+/root/.emacs.d/#macros.el#
+/usr/share/nginx/html/index.php
+/usr/share/nginx/html/#index.php#

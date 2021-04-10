@@ -1,0 +1,42 @@
+;; Emacs-W3 HTTP cookies file
+;; Automatically generated file!!! DO NOT EDIT!!!
+
+(setq url-cookie-storage
+ '(("www.digitalocean.com"
+  [url-cookie "_community_session" "Y3FGelhNUnJScmFzRlJBc1Q2SEdzcUFKN0pQYnhQd0d1c0d5N0YrRmFBYjN1a1U3V2hIV0YvaWdYbW1pSXp5WEJsRkttZnpWQXhweFVBZVNXa3B6M0hpcjl1SEZtdUJUNm5BSks2SHJyT1BaUVlTcHZqSWg4Q2NCVEc0VzNjaWNjdkZqajhNc2lKcUQzN0hLem5VMDIweDhqRklpWllVS2J6QUEyN0ZSc1M2QzhvbzU3Wmp4Z2cxQW5keTk4ODg4NEIwbUxXeGIzZ1BYUjNqS2pHRVU1ZmFLS3g5MDdBd0ZsSkZMMUZRYTMzRG15ZzNQZzBLenFUUEJPMGk3RFg4ZlREdjdWYTVxVWFXVDdoaHNkOExIamdSc2dPUG9RWCt4cjdxZXRjMFllNGZoZmxUcllpMjBzcVJiZHN5NnlkVXNhT3c0VlJDWUVOR2JPVW5WQ3pUU3Z3PT0tLVRsUmVmbnV5OVc0aytzZUJqcG92Snc9PQ%3D%3D--35d510c976cb658536317514eb4a531e3458a08d" "Fri, 21 Jan 2022 14:14:19 GMT" "/" "www.digitalocean.com" nil])
+ (".vk.com"
+  [url-cookie "remixlang" "0" "Mon, 07 Mar 2022 16:01:32 GMT" "/" ".vk.com" nil])
+ (".stackexchange.com"
+  [url-cookie "prov" "d1fc0469-9a3d-a115-abc0-e1a82c41258a" "Fri, 01-Jan-2055 00:00:00 GMT" "/" ".stackexchange.com" nil])
+ (".php.net"
+  [url-cookie "LAST_LANG" "en" "Tue Dec 28 11:13:23 2021 GMT" "/" ".php.net" nil])
+ (".superuser.com"
+  [url-cookie "prov" "cfe3649e-af3f-c00a-d219-fb258cc493d8" "Fri, 01-Jan-2055 00:00:00 GMT" "/" ".superuser.com" nil])
+ (".askubuntu.com"
+  [url-cookie "prov" "1d3587a6-5b78-c672-e5ba-1930b764e378" "Fri, 01-Jan-2055 00:00:00 GMT" "/" ".askubuntu.com" nil])
+ (".serverfault.com"
+  [url-cookie "prov" "5144ac43-d980-1699-3c71-77d1dfeca7dd" "Fri, 01-Jan-2055 00:00:00 GMT" "/" ".serverfault.com" nil])
+ ("omarket.kz"
+  [url-cookie "BITRIX_SM_GUEST_ID" "12824" "Sun Jan 30 10:00:36 2022 GMT" "/" "omarket.kz" nil]
+  [url-cookie "BITRIX_SM_LAST_VISIT" "04.02.2021+16%3A00%3A36" "Sun Jan 30 10:00:36 2022 GMT" "/" "omarket.kz" nil])
+ ("ynik.omarket.kz"
+  [url-cookie "LIVECHAT_GUEST_HASH" "29dc79f59a241bb1947bc4e2f900f672" "Fri Feb 04 10:00:38 2022 GMT" "/" "ynik.omarket.kz" nil])
+ (".stackoverflow.com"
+  [url-cookie "prov" "e922aa50-1416-06eb-2345-4ac7711f1d12" "Fri, 01-Jan-2055 00:00:00 GMT" "/" ".stackoverflow.com" nil]))
+)
+(setq url-cookie-secure-storage
+ '((".vk.com"
+  [url-cookie "remixstid" "618181078_KIZ5ZUnDEDXOUYTpz4pZSgxOnUoc06I3pR9Rul2zgyH" "Wed, 16 Feb 2022 19:48:31 GMT" "/" ".vk.com" t]
+  [url-cookie "remixlhk" "eec2eeea2168994e19" "Thu, 17 Feb 2022 03:03:43 GMT" "/" ".vk.com" t])
+ (".google.com"
+  [url-cookie "NID" "212=OCO5PLK8ZtoBHkUlFGYmdHns0Mma3EWxDz05B25b2uwtiYP61AF3jrvogR371pUJatLURTnHj-NVlI8vAlv29RZX5_WoVEZR9WqNHbnybjtiXZYTq3NExejs7Frj0N-IEMWNt5QTMVcBaaVYM__GAUnPVTMf83G_pi6L7QGVqyI" "Sat, 25-Sep-2021 09:45:11 GMT" "/" ".google.com" t])
+ ("github.com"
+  [url-cookie "_octo" "GH1.1.2123029269.1608829433" "Fri, 24 Dec 2021 17:03:53 GMT" "/" "github.com" t]
+  [url-cookie "logged_in" "no" "Fri, 24 Dec 2021 17:03:53 GMT" "/" "github.com" t]
+  [url-cookie "_device_id" "790d9877eb5f89e486e32353fdc20b15" "Sat, 26 Mar 2022 09:26:11 GMT" "/" "github.com" t]))
+)
+
+;; Local Variables:
+;; version-control: never
+;; no-byte-compile: t
+;; End:

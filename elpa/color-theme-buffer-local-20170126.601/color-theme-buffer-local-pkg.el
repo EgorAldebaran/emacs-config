@@ -1,0 +1,2 @@
+;;; Generated package description from /root/.emacs.d/elpa/color-theme-buffer-local-20170126.601/color-theme-buffer-local.el  -*- no-byte-compile: t -*-
+(define-package "color-theme-buffer-local" "20170126.601" "Install color-themes by buffer." '((color-theme "0")) :commit "e606dec66f16a06140b9aad625a4fd52bca4f936" :authors '(("Victor Borja" . "vic.borja@gmail.com")) :maintainer '("Victor Borja" . "vic.borja@gmail.com") :keywords '("faces") :url "http://github.com/vic/color-theme-buffer-local")

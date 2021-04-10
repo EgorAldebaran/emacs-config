@@ -1,0 +1,11 @@
+# key: form
+# name: form-number-one
+# --
+<form>
+  <select name="selectionlist" size="3">
+    <option value="R">red</option>
+    <option value="G">green</option>
+    <option value="B">blue</option>
+  </select>
+  <input type="button" value="Show status" onclick="showStatus(this.form);" />
+</form>

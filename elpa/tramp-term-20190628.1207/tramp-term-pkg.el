@@ -1,0 +1,2 @@
+;;; Generated package description from /root/.emacs.d/elpa/tramp-term-20190628.1207/tramp-term.el  -*- no-byte-compile: t -*-
+(define-package "tramp-term" "20190628.1207" "Automatic setup of directory tracking in ssh sessions." 'nil :commit "fdc3d5a29ca9549db462cd66d8f5d97026a1200f" :authors '(("Randy Morris" . "randy.morris@archlinux.us")) :maintainer '("Randy Morris" . "randy.morris@archlinux.us") :keywords '("tramp" "ssh") :url "https://github.com/randymorris/tramp-term.el")

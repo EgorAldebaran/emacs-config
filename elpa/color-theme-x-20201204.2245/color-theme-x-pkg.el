@@ -1,0 +1,2 @@
+;;; Generated package description from /root/.emacs.d/elpa/color-theme-x-20201204.2245/color-theme-x.el  -*- no-byte-compile: t -*-
+(define-package "color-theme-x" "20201204.2245" "convert color themes to X11 resource settings" '((cl-lib "0.5")) :commit "ec853dd931d625e07116fbc91d8829bd15f90889" :authors '(("Matthew Kennedy" . "mkennedy@killr.ath.cx")) :maintainer '("Andrew Johnson" . "andrew@andrewjamesjohnson.com") :keywords '("convenience" "faces" "frames") :url "https://github.com/ajsquared/color-theme-x")

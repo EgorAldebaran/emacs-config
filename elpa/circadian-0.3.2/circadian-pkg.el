@@ -1,0 +1,2 @@
+;;; Generated package description from /root/.emacs.d/elpa/circadian-0.3.2/circadian.el  -*- no-byte-compile: t -*-
+(define-package "circadian" "0.3.2" "Theme-switching based on daytime" '((emacs "24.4")) :commit "9894361dcd6ffb6d4629b4cbbabda2153699eb8e" :authors '(("Guido Schmidt")) :maintainer '("Guido Schmidt" . "git@guidoschmidt.cc") :keywords '("themes") :url "https://github.com/GuidoSchmidt/circadian")

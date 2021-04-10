@@ -1,0 +1,2 @@
+;;; Generated package description from /root/.emacs.d/elpa/wikinfo-20210102.2125/wikinfo.el  -*- no-byte-compile: t -*-
+(define-package "wikinfo" "20210102.2125" "Scrape Wikipedia Infoboxes" '((emacs "27.1")) :commit "e59b0d90155c1b38178f71f42a1b8797d4fcc8f1" :authors '(("Nicholas Vollmer" . "progfolio@protonmail.com")) :maintainer '("Nicholas Vollmer" . "progfolio@protonmail.com") :keywords '("org" "convenience") :url "https://github.com/progfolio/wikinfo")

@@ -1,0 +1,2 @@
+;;; Generated package description from /root/.emacs.d/elpa/theme-looper-20201107.4/theme-looper.el  -*- no-byte-compile: t -*-
+(define-package "theme-looper" "20201107.4" "Loop thru the available color-themes" '((emacs "24") (cl-lib "0.5")) :commit "6bc170097f1dfb7ea4db91544c5ab653279e15cd" :keywords '("convenience" "color-themes") :authors '(("Mohammed Ismail Ansari" . "team.terminal@gmail.com")) :maintainer '("Mohammed Ismail Ansari" . "team.terminal@gmail.com") :url "http://ismail.teamfluxion.com")

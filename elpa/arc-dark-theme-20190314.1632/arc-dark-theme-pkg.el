@@ -1,0 +1,2 @@
+;;; Generated package description from /root/.emacs.d/elpa/arc-dark-theme-20190314.1632/arc-dark-theme.el  -*- no-byte-compile: t -*-
+(define-package "arc-dark-theme" "20190314.1632" "Arc dark theme" '((emacs "24")) :commit "ee17dcca35dd0304145efc468b3f25af6907a59d" :authors '(("Christopher Fraser" . "cfraz89@gmail.com")) :maintainer '("Christopher Fraser" . "cfraz89@gmail.com") :keywords '("faces" "theme") :url "https://github.com/cfraz89/arc-dark-theme")
