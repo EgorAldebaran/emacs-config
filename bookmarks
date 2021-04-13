@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("Application.php"
+(#1=(#("bookmark+-1.el" 0 14
+      (bmkp-full-record #1#))
+    (filename . "/root/.emacs.d/bookmark+-1.el")
+    (position . 0)
+    (created 24693 23548 895112 561000))
+("Application.php"
  (filename . "/srv/http/yii/vendor/yiisoft/yii2/base/Application.php")
  (front-context-string . "    abstract pub")
  (rear-context-string . "esponse\n     */\n")
@@ -548,8 +553,11 @@
  (rear-context-string . "96 Jan 29 10:48 ")
  (position . 1486))
 ("aaegor"
+ (end-position . 5248)
+ (time 24693 23691 103519 698000)
+ (visits . 0)
  (filename . "~/.emacs.d/init.el")
  (front-context-string . "\n\n\n;;(global-set")
  (rear-context-string . "-four-element)\n\n")
- (position . 5001))
+ (position . 5248))
 )

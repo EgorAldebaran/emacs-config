@@ -26,6 +26,8 @@
 (setq-default standart-indent    4)
 (setq backup-inhibited    t)
 
+(setq dired-toogle-find-file-reuse-dir 1)
+
 (desktop-save-mode    1)
 (fset 'yes-or-no-p 'y-or-n-p)
 (global-hl-line-mode 1)
@@ -57,7 +59,7 @@
 
 ;;(with-eval-after-load 'tramp(tramp-change-syntax))
 ;;;устанавливаем постоянное сохранение кэша паролей для бомжа
-(setq password-cache-expiry nil)
+(setq password-cache-expiry t)
 
 (show-paren-mode t)
 (setq show-paren-style 'expression)
@@ -184,6 +186,7 @@
 (set-register ?a '(file . "/root/.emacs.d/init.el"))
 (set-register ?j '(file . "/root/.emacs.d/jump/jump.el"))
 
+
  
 ;;; одно нужно комментировать
 ;;(load "/root/.emacs.d/registers/corntatus.el")
@@ -194,13 +197,13 @@
 (set-register ?9 '("aldebaran"))
 
 (set-register ?t '("$this"))
+(set-register ?f '("flour-one"))
 
 
 (load "/root/.emacs.d/jump/jump.el")
 
 ;; должен сам настроить модель
   
-
 
 
 ;;(global-set-key (kbd "<menu>") 'bookmark-set-save-and-save-file)
@@ -321,6 +324,7 @@
     ("#ffffff" . "#ffffff")])
  '(ansi-term-color-vector
    [unspecified "#1c1e26" "#e95678" "#29d398" "#fac29a" "#26bbd9" "#ee64ac" "#26bbd9" "#cbced0"] t)
+ '(bmkp-last-as-first-bookmark-file "~/.emacs.d/bookmarks")
  '(company-quickhelp-color-background "#b0b0b0")
  '(company-quickhelp-color-foreground "#232333")
  '(custom-safe-themes
@@ -355,7 +359,7 @@
    '("#336c6c" "#205070" "#0f2050" "#806080" "#401440" "#6c1f1c" "#6b400c" "#23733c"))
  '(objed-cursor-color "#d02b61")
  '(package-selected-packages
-   '(magit cpp-auto-include projectile helm-projectile ssh-deploy tramp-term lorem-ipsum wikinfo afternoon-theme ahungry-theme airline-themes almost-mono-themes ample-theme ample-zen-theme anti-zenburn-theme apropospriate-theme arc-dark-theme arjen-grey-theme atom-dark-theme atom-one-dark-theme autumn-light-theme badger-theme badwolf-theme base16-theme basic-theme berrys-theme birds-of-paradise-plus-theme blackboard-theme bliss-theme borland-blue-theme boron-theme brutal-theme brutalist-theme bubbleberry-theme busybee-theme calmer-forest-theme caroline-theme chocolate-theme chyla-theme circadian cloud-theme clues-theme colonoscopy-theme color-theme color-theme-approximate color-theme-buffer-local color-theme-modern color-theme-sanityinc-solarized color-theme-sanityinc-tomorrow color-theme-x alect-themes cycle-themes modus-themes helm-themes avk-emacs-themes nyx-theme minsk-theme tao-theme theme-looper ayu-theme toxi-theme kaolin-themes humanoid-themes colorless-themes lab-themes company-web yasnippet emmet-mode web-mode zeno-theme yoshi-theme window-number theme-magic slime select-themes php-mode one-themes idomenu helm go-translate ecb doom-themes cherry-blossom-theme challenger-deep-theme babel auto-complete acme-theme))
+   '(tramp-auto-auth image-dired+ magit cpp-auto-include projectile helm-projectile ssh-deploy tramp-term lorem-ipsum wikinfo afternoon-theme ahungry-theme airline-themes almost-mono-themes ample-theme ample-zen-theme anti-zenburn-theme apropospriate-theme arc-dark-theme arjen-grey-theme atom-dark-theme atom-one-dark-theme autumn-light-theme badger-theme badwolf-theme base16-theme basic-theme berrys-theme birds-of-paradise-plus-theme blackboard-theme bliss-theme borland-blue-theme boron-theme brutal-theme brutalist-theme bubbleberry-theme busybee-theme calmer-forest-theme caroline-theme chocolate-theme chyla-theme circadian cloud-theme clues-theme colonoscopy-theme color-theme color-theme-approximate color-theme-buffer-local color-theme-modern color-theme-sanityinc-solarized color-theme-sanityinc-tomorrow color-theme-x alect-themes cycle-themes modus-themes helm-themes avk-emacs-themes nyx-theme minsk-theme tao-theme theme-looper ayu-theme toxi-theme kaolin-themes humanoid-themes colorless-themes lab-themes company-web yasnippet emmet-mode web-mode zeno-theme yoshi-theme window-number theme-magic slime select-themes php-mode one-themes idomenu helm go-translate ecb doom-themes cherry-blossom-theme challenger-deep-theme babel auto-complete acme-theme))
  '(pdf-view-midnight-colors '("#232333" . "#c7c7c7"))
  '(rustic-ansi-faces
    ["#1b1d1e" "#d02b61" "#60aa00" "#d08928" "#6c9ef8" "#b77fdb" "#00aa80" "#dddddd"])
