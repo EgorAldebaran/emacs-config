@@ -1,0 +1,6 @@
+;;; -*- coding: utf-8 -*-
+(("/root/.emacs.d/init.el" . 26104)
+ ("/ssh:root@lamp-huravltampl.tc200py.tcenv.cloud#22010|sudo:root@lamp-huravltampl.tc200py.tcenv.cloud:/var/www/default/backend/controllers/"
+  (dired-filename . "/ssh:root@lamp-huravltampl.tc200py.tcenv.cloud#22010|sudo:root@lamp-huravltampl.tc200py.tcenv.cloud:/var/www/default/backend/controllers/SiteController.php"))
+ ("/root/.emacs.d/"
+  (dired-filename . "/root/.emacs.d/example.el")))
