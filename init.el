@@ -48,8 +48,16 @@
 ;;;;;подключаю мою мечту переключение между буфферами;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+(global-unset-key (kbd "C-o"))
 
- 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;изучаю бродягу;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(require 'auth-source)
+
+;;(with-eval-after-load 'tramp(tramp-change-syntax))
+;;;устанавливаем постоянное сохранение кэша паролей для бомжа
+(setq password-cache-expiry nil)
 
 (show-paren-mode t)
 (setq show-paren-style 'expression)
@@ -62,6 +70,7 @@
 (set-default 'truncate-lines t)
 
 
+
 ;;; 3. Всевозможные загрузки и пакеты
 ;;; Load
 ;;; load xmodmap - for n - enter or another keyboard change
@@ -72,7 +81,7 @@
 ;;;load my macros
 (load "/root/.emacs.d/macros.el")
 (load "/root/.emacs.d/main-macros.el")
-(load "/root/.emacs.d/my-jump-for-bitrix.el")
+
 
 ;;run xmodmap
 (xmodmap)
@@ -127,8 +136,39 @@
 ;;;load my macros
 (load "/root/.emacs.d/macros.el")
 
-(load "/root/.emacs.d/my-jump-for-yii")
+(load "/root/.emacs.d/jump/jump.el")
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;моя программа для прыжков
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(setq цена-акции 100)
+
+(setq уровень 101)
+
+(let ((GOOGLE цена-акции)
+      (LEVEL-GOOGLE уровень))
+  (if (> GOOGLE LEVEL-GOOGLE)
+      (message "продаю")
+    (message "покупаю")))
+
+;;; переключатель находится в двух режимах - если истина то регистры домашние если путсота - то регистры далеких баз
+
+(setq jump-local nil)
+
+
+(defun ajamp ()
+  "documentation ajamp"
+  (interactive)
+(let ((jump jump-local))
+  (if (equal jump t)
+      (load "/root/.emacs.d/registers/home.el")
+    (load "/root/.emacs.d/registers/lesson.el"))))
+
+
+
+
+(global-unset-key (kbd "C-o"))
 (global-unset-key (kbd "C-l"))
 (global-set-key (kbd "C-l") 'bookmark-jump)
 (global-set-key (kbd "M-n") 'recenter-top-bottom)
@@ -138,144 +178,28 @@
 (global-set-key (kbd "M-o") 'open-line)
 (global-unset-key (kbd "C-o"))
 
-(set-register ?t '(file . "/srv/http/lesson/tutor.php"))
+
+
+(set-register ?t '(file . "/srv/http/tutor.php"))
 (set-register ?a '(file . "/root/.emacs.d/init.el"))
+(set-register ?j '(file . "/root/.emacs.d/jump/jump.el"))
 
-
+ 
 ;;; одно нужно комментировать
-;;(load "/root/.emacs.d/remoteRegister.el")
-(load "/root/.emacs.d/homeRegister.el")
+;;(load "/root/.emacs.d/registers/corntatus.el")
+;;(load "/root/.emacs.d/registers/home.el")
+;;;(load "/root/.emacs.d/registers/lesson.el")
 
 (set-register ?0 '("corntatus_x"))
 (set-register ?9 '("aldebaran"))
 
-;;(set-register ?1 '("K3A4HDLdsI4OEMsUIdH9m"))
-;;(set-register ?2 '("developer"))
-;;(set-register ?l '("localhost:8080"))
-
 (set-register ?t '("$this"))
 
 
-;;(set-register ?h '("194.4.57.219"))
-;;(set-register ?n '("ssh:bitrix@194.4.57.219"))
-;;(set-register ?p '("m5n12F1WLL2kBqzNnESr"))
-
-;;(set-register ?P '("K3A4HDLdsI4OEMsUIdH9m"))
-
-
-;;(set-register ?j '(file . "/srv/http/jump.el"))
-
-;;(set-register ?s '(file . "/srv/http/"))
-;;(set-register ?e '(file . "/root/.emacs.d/init.el"))
-;;(set-register ?t '(file . "/srv/http/tutor.php"))
+(load "/root/.emacs.d/jump/jump.el")
 
 ;; должен сам настроить модель
-
-;;; прыжки для всех моделей и модулей
-(defun jump-q-element() "jump to element" (interactive) (bookmark-jump "q"))
-(global-set-key (kbd "C-o q") 'jump-q-element)
-(defun jump-w-element() "jump to element" (interactive) (bookmark-jump "w"))
-(global-set-key  (kbd "C-o w") 'jump-w-element)
-(defun jump-e-element() "jump to element" (interactive) (bookmark-jump "e"))
-(global-set-key  (kbd "C-o e") 'jump-e-element)
-(defun jump-r-element() "jump to element" (interactive) (bookmark-jump "r"))
-(global-set-key (kbd "C-o r") 'jump-r-element)
-(defun jump-t-element() "jump to element" (interactive) (bookmark-jump "t"))
-(global-set-key (kbd "C-o t") 'jump-t-element)
-(defun jump-y-element() "jump to element" (interactive) (bookmark-jump "y"))
-(global-set-key  (kbd "C-o y") 'jump-y-element)
-(defun jump-u-element() "jump to element" (interactive) (bookmark-jump "u"))
-(global-set-key  (kbd "C-o u") 'jump-u-element)
-(defun jump-i-element() "jump to element" (interactive) (bookmark-jump "i"))
-(global-set-key  (kbd "C-o i") 'jump-i-element)
-(defun jump-o-element() "jump to element" (interactive) (bookmark-jump "o"))
-(global-set-key (kbd "C-o o") 'jump-o-element)
-(defun jump-p-element() "jump to element" (interactive) (bookmark-jump "p"))
-(global-set-key  (kbd "C-o p") 'jump-p-element)
-(defun jump-kray-element() "jump to element" (interactive) (bookmark-jump "["))
-(global-set-key (kbd "C-o [") 'jump-)
-
-;;; прыжки для всех  форм
-(defun jump-z-element() "jump to element" (interactive) (bookmark-jump "z"))
-(global-set-key  (kbd "C-o z") 'jump-z-element)
-(defun jump-x-element() "jump to element" (interactive) (bookmark-jump "x"))
-(global-set-key  (kbd "C-o x") 'jump-x-element)
-(defun jump-c-element() "jump to element" (interactive) (bookmark-jump "c"))
-(global-set-key  (kbd "C-o c") 'jump-c-element)
-(defun jump-v-element() "jump to element" (interactive) (bookmark-jump "v"))
-(global-set-key (kbd "C-o v") 'jump-v-element)
-(defun jump-b-element() "jump to element" (interactive) (bookmark-jump "b"))
-(global-set-key  (kbd "C-o b") 'jump-b-element)
-(defun jump-n-element() "jump to element" (interactive) (bookmark-jump "n"))
-(global-set-key  (kbd "C-o n") 'jump-n-element)
-(defun jump-m-element() "jump to element" (interactive) (bookmark-jump "m"))
-(global-set-key  (kbd "C-o m") 'jump-m-element)
- 
-
-;;; прыжки для всех контроллеров проекта и для индекса
-
-(defun jump-a-element() "jump to element" (interactive) (bookmark-jump "basic"))
-(global-set-key (kbd "C-o a") 'jump-a-element)
-
-
-
-(defun jump-s-element() "jump to element" (interactive) (bookmark-jump "s"))
-(global-set-key  (kbd "C-o s") 'jump-s-element)
-(defun jump-d-element() "jump to element" (interactive) (bookmark-jump "d"))
-(global-set-key  (kbd "C-o d") 'jump-d-element)
-(defun jump-f-element() "jump to element" (interactive) (bookmark-jump "f"))
-(global-set-key  (kbd "C-o f") 'jump-f-element)
-(defun jump-g-element() "jump to element" (interactive) (bookmark-jump "g"))
-(global-set-key  (kbd "C-o g") 'jump-g-element)
-(defun jump-h-element() "jump to element" (interactive) (bookmark-jump "h"))
-(global-set-key  (kbd "C-o h") 'jump-h-element)
-(defun jump-j-element() "jump to element" (interactive) (bookmark-jump "j"))
-(global-set-key  (kbd "C-o j") 'jump-j-element)
-(defun jump-k-element() "jump to element" (interactive) (bookmark-jump "k"))
-(global-set-key  (kbd "C-o k") 'jump-k-element)
-(defun jump-l-element() "jump to element" (interactive) (bookmark-jump "l"))
-(global-set-key  (kbd "C-o l") 'jump-l-element)
-(defun jump-index-element() "jump to element" (interactive) (bookmark-jump ";"))
-(global-set-key  (kbd "C-o ;") 'jump-index-element)
-(defun jump-mega-element() "jump to element" (interactive) (bookmark-jump "$"))
-(global-set-key  (kbd "C-o <") 'jump-mega-element)
-
-(fset 'copy-file-to-dired-one-8
-   (kmacro-lambda-form [?\M-< ?\C-n ?\C-n ?\C-n ?\C-n ?\C-  ?\C-e ?\C-x ?c ?1 ?\C-n ?\C-  ?\C-e ?\C-x ?c ?2 ?\C-n ?\C-  ?\C-e ?\C-x ?c ?3 ?\C-n ?\C-  ?\C-e ?\C-x ?c ?4 ?\C-n ?\C-  ?\C-e ?\C-x ?c ?5 ?\C-n ?\C-  ?\C-e ?\C-x ?c ?6 ?\C-n ?\C-  ?\C-e ?\C-x ?c ?7 ?\C-n ?\C-  ?\C-e ?\C-x ?c ?8] 0 "%d"))
-(global-set-key (kbd "C-q 0") 'copy-file-to-dired-one-8)
-
-(fset 'вставляем-файлы-в-телепорты
-   (kmacro-lambda-form [?\C-a ?\C-s ?d ?e ?f backspace ?f ?u ?n return ?\C-e ?\C-r ?\" return ?\C-x ?i ?1 ?\C-e ?\C-s ?d ?e ?f ?u ?n return ?\C-e ?\C-r ?\" return ?\C-x ?i ?2 ?\C-s ?d ?e ?f ?u ?n return ?\C-e ?\C-r ?\" return ?\C-x ?i ?3 ?\C-s ?d ?e ?f ?u ?n return ?\C-e ?\C-r ?\" return ?\C-x ?i ?4 ?\C-s ?d ?e ?f ?u ?n return ?\C-e ?\C-r ?\" return ?\C-x ?i ?5 ?\C-s ?d ?e ?f ?u ?n return ?\C-e ?\C-r ?\" return ?\C-x ?i ?6 ?\C-s ?d ?e ?f ?u ?n return ?\C-e ?\C-r ?\" return ?\C-x ?i ?7 ?\C-s ?d ?e ?f ?u ?n return ?\C-e ?\C-r ?\" return ?\C-x ?i ?8 ?\C-x ?i ?7] 0 "%d"))
-(global-set-key (kbd "C-o 9") 'вставляем-файлы-в-телепорты)
-
-(fset 'очищает-места-в-телепортах
-   (kmacro-lambda-form [?\C-e ?â ?â ?ê ?ê ?\C-e ?\C-n ?\C-n ?\C-e] 0 "%d"))
-(global-set-key (kbd "C-o 2") 'очищает-места-в-телепортах)
-
-
-
-;;(global-set-key (kbd "C-o 0") 'bitrix-jump-core)
-;;(global-set-key (kbd "C-o `") 'my-bitrix-jump-config)
-;;(global-set-key (kbd "C-o n") 'my-bitrix-jump-index) 
-;;(global-set-key (kbd "C-o o") 'bitrix-jump-model)
-;;(global-set-key (kbd "C-o k") 'bitrix-jump-component)
-;;(global-set-key (kbd "C-o m") 'bitrix-jump-template)
-;;(global-set-key (kbd "C-o ;") 'bitrix-jump-description)
-;;(global-set-key (kbd "C-o t") 'bitrix-test-jump)
-
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; (global-set-key (kbd "C-o 0") 'jump-keter)	      ;;
-;; (global-set-key (kbd "C-o i") 'go-bookmark-hokma)  ;;
-;; (global-set-key (kbd "C-o p") 'jump-bina-index)    ;;
-;; (global-set-key (kbd "C-o k") 'jump-tiferet-human) ;;
-;; (global-set-key (kbd "C-o o") 'jump-feedback)      ;;
-;; (global-set-key (kbd "C-o ;") 'jump-layout)	      ;;
-;; 						      ;;
-;; (global-set-key (kbd "C-o t") 'jump-test)	      ;;
-;; (global-set-key (kbd "C-o e") 'jump-to-home)	      ;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
+  
 
 
 
@@ -309,6 +233,7 @@
 (global-set-key (kbd "C-q a") 'next-line)
 (global-set-key (kbd "C-q 1") 'previous-line)
 ;;(global-set-key (kbd "\ed") 'other-window)
+(global-set-key (kbd "\ed") 'web-mode)
 (global-set-key (kbd "s-o") 'other-window)
 
 (global-set-key (kbd "C-x t n") 'tab-new)
@@ -526,8 +451,6 @@
 (global-unset-key (kbd "C-x C-n"))
 (global-set-key (kbd "C-x C-n C-s") 'replace-string)
 (global-set-key (kbd "C-x C-n s") 'replace-string)
-
-
 
 
 
@@ -807,7 +730,7 @@ cd views; rm -r site; cd ..; rm -r models; mkdir models; cd views; cd layouts; r
 
 (global-set-key (kbd "C-c c") 'xphp)
 
-
+(global-unset-key (kbd "C-v"))
 
 (fset 'forPHP
       (kmacro-lambda-form [?\C-e return ?\{ return] 0 "%d"))
@@ -855,9 +778,9 @@ cd views; rm -r site; cd ..; rm -r models; mkdir models; cd views; cd layouts; r
   (insert "var_dump()")
   (backward-char 1))
 
-(global-set-key (kbd "C-v v") 'var_dump)
-(global-set-key (kbd "C-v C-v") 'var_dump)
-
+(global-set-key (kbd "C-v v") 'mega-var-dump-php)
+(global-set-key (kbd "C-v C-v") 'mega-var-dump-php)
+ 
 
 ;;;; подключаю систему для работы с гит majit
 (require 'magit)
@@ -887,10 +810,5 @@ cd views; rm -r site; cd ..; rm -r models; mkdir models; cd views; cd layouts; r
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;создадим заполнение для модели на yii2
 (defun model() "заполнение для модели на yii2" (interactive) (insert "<?php  \nnamespace app\\models;\nuse Yii;\nuse yii\\base\\Model;\n\n"))
-
-
-
-
-
 
 

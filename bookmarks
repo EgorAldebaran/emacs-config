@@ -19,14 +19,14 @@
  (position . 1))
 ("s"
  (filename . "/srv/http/basic/controllers/UnitController.php")
- (front-context-string)
- (rear-context-string)
- (position . 1))
+ (front-context-string . "\n         /**\n  ")
+ (rear-context-string . " ]);\n         }\n")
+ (position . 1214))
 ("e"
  (filename . "/srv/http/basic/models/Unit.php")
- (front-context-string)
- (rear-context-string)
- (position . 1))
+ (front-context-string . "                ")
+ (rear-context-string . "name' => 'Имя',\n")
+ (position . 526))
 ("c"
  (filename . "/srv/http/basic/views/unit/create.php")
  (front-context-string)
@@ -39,9 +39,9 @@
  (position . 1))
 (";"
  (filename . "/srv/http/basic/views/unit/index.php")
- (front-context-string)
- (rear-context-string)
- (position . 1))
+ (front-context-string . ")  ?>\n	<img alt=")
+ (rear-context-string . "g('@web/images/q")
+ (position . 374))
 ("m"
  (filename . "/srv/http/basic/views/unit/_form.php")
  (front-context-string)
@@ -143,8 +143,8 @@
  (rear-context-string . "96 Mar 21 11:23 ")
  (position . 1287))
 ("tutor.php"
- (filename . "/ssh:corntatus@188.225.21.131:/home/c/corntatus/public_html/views/site/tutor.php")
- (front-context-string)
+ (filename . "/srv/http/tutor.php")
+ (front-context-string . "/// _form.php\n<?")
  (rear-context-string)
  (position . 1))
 ("lesson"
