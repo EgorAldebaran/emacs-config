@@ -26,7 +26,7 @@
 (setq-default standart-indent    4)
 (setq backup-inhibited    t)
 
-(setq dired-toogle-find-file-reuse-dir 1)
+
 
 (desktop-save-mode    1)
 (fset 'yes-or-no-p 'y-or-n-p)
@@ -37,7 +37,7 @@
 (tool-bar-mode -1)
 
 (setq frame-title-format "Egor_GNU_ArchEmacs")
-
+ 
 (require 'ido)
 (ido-mode t)
 (icomplete-mode t)
@@ -46,6 +46,12 @@
 
 ;;;для того чтобы емакс запоминал расположение буфферов для удобного копирования
 (setq dired-dwim-target t)
+;;; для того чтобы включить dired+
+(load "/root/.emacs.d/dired+.el")
+;;; для того чтобы не было в буфере диреда вроде как -1 do not reuse 1 reuse
+(setq diredp-toogle-find-file-reuse-dir 1)
+;;;что то не помогает но вот эта штука точно поможет
+(load "/root/.emacs.d/single.el")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;подключаю мою мечту переключение между буфферами;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -814,5 +820,36 @@ cd views; rm -r site; cd ..; rm -r models; mkdir models; cd views; cd layouts; r
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;создадим заполнение для модели на yii2
 (defun model() "заполнение для модели на yii2" (interactive) (insert "<?php  \nnamespace app\\models;\nuse Yii;\nuse yii\\base\\Model;\n\n"))
+
+
+(require 'tramp-auto-auth)
+
+(add-to-list
+ 'tramp-auto-auth-alist
+ '("root@10\\.0\\." .
+   (:host "Funny-Machines" :user "root" :port "ssh")))
+
+(tramp-auto-auth-mode)
+
+
+(auth-source-remember '(:host "Funny-Machines" :user "root" :port "ssh")
+		      '((:secret "$r00tP#sWD!")))
+
+ (defun my-macro-query (arg)
+      "Prompt for input using minibuffer during kbd macro execution.
+    With prefix argument, allows you to select what prompt string to use.
+    If the input is non-empty, it is inserted at point."
+      (interactive "P")
+      (let* ((query (lambda () (kbd-macro-query t)))
+             (prompt (if arg (read-from-minibuffer "PROMPT: ") "Input: "))
+             (input (unwind-protect
+                        (progn
+                          (add-hook 'minibuffer-setup-hook query)
+                          (read-from-minibuffer prompt))
+                      (remove-hook 'minibuffer-setup-hook query))))
+        (unless (string= "" input) (insert input))))
+
+
+
 
 
