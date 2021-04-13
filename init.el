@@ -850,6 +850,9 @@ cd views; rm -r site; cd ..; rm -r models; mkdir models; cd views; cd layouts; r
         (unless (string= "" input) (insert input))))
 
 
+;;; маскросы для переводческого отдела
+(global-set-key (kbd "C-<tab>") 'целиком-все-переводим)
+(global-set-key (kbd "s-$") 'переводим-до-точки)
 
 
 
