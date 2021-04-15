@@ -2,7 +2,32 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(#1=(#("bookmark+-1.el" 0 14
+(("sites-enabled"
+ (filename . "/ssh:root@lamp-huravltampl.tc200py.tcenv.cloud#22010|sudo:root@lamp-huravltampl.tc200py.tcenv.cloud:/etc/apache2/sites-enabled/")
+ (front-context-string . "000-default.conf")
+ (rear-context-string . "35 Nov 16  2018 ")
+ (position . 313))
+("lesson-apache2-config"
+ (filename . "/ssh:root@lamp-huravltampl.tc200py.tcenv.cloud#22010|sudo:root@lamp-huravltampl.tc200py.tcenv.cloud:/etc/apache2/")
+ (front-context-string . "apache2.conf\n  d")
+ (rear-context-string . "24 Nov  3  2018 ")
+ (position . 302))
+("apache2-lesson"
+ (filename . "/ssh:root@lamp-huravltampl.tc200py.tcenv.cloud#22010|sudo:root@lamp-huravltampl.tc200py.tcenv.cloud:/var/log/apache2/")
+ (front-context-string . "access.log\n  -rw")
+ (rear-context-string . "15 Apr 14 08:40 ")
+ (position . 327))
+("register-lesson"
+ (filename . "~/.emacs.d/registers/lesson.el")
+ (front-context-string . ";;;;;;;;;;;;;;;;")
+ (rear-context-string . " version common\n")
+ (position . 154))
+("jump"
+ (filename . "~/.emacs.d/jump/jump.el")
+ (front-context-string . ";;; прыжки для в")
+ (rear-context-string)
+ (position . 1))
+#1=(#("bookmark+-1.el" 0 14
       (bmkp-full-record #1#))
     (filename . "/root/.emacs.d/bookmark+-1.el")
     (position . 0)

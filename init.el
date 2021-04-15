@@ -65,7 +65,7 @@
 
 ;;(with-eval-after-load 'tramp(tramp-change-syntax))
 ;;;устанавливаем постоянное сохранение кэша паролей для бомжа
-(setq password-cache-expiry t)
+
 
 (show-paren-mode t)
 (setq show-paren-style 'expression)
@@ -171,9 +171,10 @@
 (let ((jump jump-local))
   (if (equal jump t)
       (load "/root/.emacs.d/registers/home.el")
+    (load "/root/.emacs.d/registers/home-app.el")
     (load "/root/.emacs.d/registers/lesson.el"))))
 
-
+ 
 
 
 (global-unset-key (kbd "C-o"))
@@ -203,7 +204,10 @@
 (set-register ?9 '("aldebaran"))
 
 (set-register ?t '("$this"))
-(set-register ?f '("flour-one"))
+;;(set-register ?F '("flour-one"))
+;;(set-register ?F '("list-ocean"))
+;;(set-register ?f '("aeZO6ysRqLd5"))
+(set-register ?f '("list-ocean"))
 
 
 (load "/root/.emacs.d/jump/jump.el")
@@ -852,7 +856,23 @@ cd views; rm -r site; cd ..; rm -r models; mkdir models; cd views; cd layouts; r
 
 ;;; маскросы для переводческого отдела
 (global-set-key (kbd "C-<tab>") 'целиком-все-переводим)
-(global-set-key (kbd "s-$") 'переводим-до-точки)
+(global-set-key (kbd "s-<") 'переводим-до-точки)
+
+(setq auth-sources '("~/.authinfo.gpg" "~/.authinfo"))
+
+
+(customize-set-variable 'ange-ftp-netrc-filename "~/.authinfo.gpg")
+
+;;; заклинание для бомжа чтобы он не стирал пароли
+(setq password-cache-expiry nil)
+
+;;(setq tramp-default-method "ssh")
+
+
+
+
+
+
 
 
 

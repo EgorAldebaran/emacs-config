@@ -3,6 +3,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (progn
   (set-register  ?r '(file . "/ssh:root@lamp-huravltampl.tc200py.tcenv.cloud#22010|sudo:root@lamp-huravltampl.tc200py.tcenv.cloud:/var/www/default/backend/controllers/"))
+  (set-register  ?y '(file . "/ssh:root@lamp-huravltampl.tc200py.tcenv.cloud#22010|sudo:root@lamp-huravltampl.tc200py.tcenv.cloud:/var/www/default/"))
   (set-register  ?m '(file . "/ssh:root@lamp-huravltampl.tc200py.tcenv.cloud#22010|sudo:root@lamp-huravltampl.tc200py.tcenv.cloud:/var/www/default/backend/models/"))
   (set-register  ?w '(file . "/ssh:root@lamp-huravltampl.tc200py.tcenv.cloud#22010|sudo:root@lamp-huravltampl.tc200py.tcenv.cloud:/var/www/default/backend/web/"))
   (set-register  ?q '(file . "/ssh:root@lamp-huravltampl.tc200py.tcenv.cloud#22010|sudo:root@lamp-huravltampl.tc200py.tcenv.cloud:/var/www/default/backend/config/"))

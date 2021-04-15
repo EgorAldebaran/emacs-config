@@ -1,3 +1,13 @@
 (+ 100 1010)
 ls -ll
 php
+(+ 100 100)
+(setq over(100))
+(setq over("jacke"))
+(defun mega() )
+(defun mega() (insert "hello world"))
+mega
+hello world
+(defun mega() (insert "ls -la"))
+mega
+ls -la
