@@ -63,9 +63,16 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (require 'auth-source)
 
+(require 'tramp)
+
 ;;(with-eval-after-load 'tramp(tramp-change-syntax))
 ;;;устанавливаем постоянное сохранение кэша паролей для бомжа
 
+
+;;;; запредельно сложновато блин но кажется это то что нужно бился над этим ооочень долго
+(setq auth-sources
+      '((:source "~/.emacs.d/.authinfo.gpg"
+		 auth-source-debug t)))
 
 (show-paren-mode t)
 (setq show-paren-style 'expression)
@@ -174,6 +181,16 @@
     (load "/root/.emacs.d/registers/home-app.el")
     (load "/root/.emacs.d/registers/lesson.el"))))
 
+(setq jump "/root/.emacs.d/registers/home-app.el")
+(setq jump "/root/.emacs.d/registers/lesson.el")
+
+
+(defun jump-jump ()
+  "documentation jump jump"
+  (interactive)
+  (load jump))
+
+(jump-jump)
  
 
 
@@ -208,7 +225,7 @@
 ;;(set-register ?F '("list-ocean"))
 ;;(set-register ?f '("aeZO6ysRqLd5"))
 (set-register ?f '("list-ocean"))
-
+(set-register ?l '("ssh:root@lamp-kseniasoloshenko83.tc200py.tcenv.cloud#22007|sudo:root@lamp-kseniasoloshenko83.tc200py.tcenv.cloud:")) 
 
 (load "/root/.emacs.d/jump/jump.el")
 
@@ -868,11 +885,9 @@ cd views; rm -r site; cd ..; rm -r models; mkdir models; cd views; cd layouts; r
 
 ;;(setq tramp-default-method "ssh")
 
+(require 'fill-column-indicator)
 
-
-
-
-
-
+(setq fci-rule-width 1)
+(setq fci-rule-color "green")
 
 

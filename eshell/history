@@ -11,3 +11,6 @@ hello world
 (defun mega() (insert "ls -la"))
 mega
 ls -la
+(defun mega() (insert "pwd"))
+mega
+pwd
