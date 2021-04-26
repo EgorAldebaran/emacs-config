@@ -890,4 +890,5 @@ cd views; rm -r site; cd ..; rm -r models; mkdir models; cd views; cd layouts; r
 (setq fci-rule-width 1)
 (setq fci-rule-color "green")
 
+(setq hello '(world))
 
